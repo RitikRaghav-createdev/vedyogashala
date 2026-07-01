@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/jpeg" href="images/logo-mark.jpeg">
+<link rel="apple-touch-icon" href="images/logo-mark.jpeg">
+<title>Ved Yoga Shala | International Yoga Teachers | Gurugram</title>
+
+<!-- Before going live: replace every "https://www.vedyogashala.com" with the studio's real web address (also in robots.txt and sitemap.xml). See "READ ME - Before You Publish.txt". -->
+<meta name="description" content="Ved Yoga Shala near Subhash Chowk, Sector 38, Gurugram — 11+ years internationally experienced yoga therapist Yogi Ved. Group, aerial, corporate & advanced yoga, teacher training and meditation courses. Open daily 6 AM–9 PM. Book a free trial class.">
+<link rel="canonical" href="https://www.vedyogashala.com/">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="Ved Yoga Shala | International Yoga Teachers | Gurugram">
+<meta property="og:description" content="11+ years internationally experienced yoga therapist. Group, aerial, corporate & advanced yoga, teacher training and meditation courses in Gurugram.">
+<meta property="og:url" content="https://www.vedyogashala.com/">
+<meta property="og:image" content="https://www.vedyogashala.com/images/logo-mark.jpeg">
+<meta property="og:locale" content="en_IN">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ved Yoga Shala | International Yoga Teachers | Gurugram">
+<meta name="twitter:description" content="11+ years internationally experienced yoga therapist. Group, aerial, corporate & advanced yoga, teacher training and meditation courses in Gurugram.">
+<meta name="twitter:image" content="https://www.vedyogashala.com/images/logo-mark.jpeg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --saffron: #D4722A;
+    --saffron-light: #E8956A;
+    --ivory: #FAF6F0;
+    --ivory-dark: #F0EAE0;
+    --green: #2D5540;
+    --green-light: #3D6B4F;
+    --brown: #4A2E1A;
+    --text: #2C1810;
+    --text-light: #6B4F3A;
+    --white: #FFFFFF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--ivory);
+    color: var(--text);
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: rgba(212,114,42,0.2);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* ─── BLOOM ORBS (ambient glow blobs) ─── */
+  .bloom-layer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .bloom-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0;
+    animation: bloomPulse 6s ease-in-out infinite alternate;
+  }
+
+  @keyframes bloomPulse {
+    0%   { opacity: 0.18; transform: scale(1); }
+    100% { opacity: 0.38; transform: scale(1.12); }
+  }
+
+  /* ─── LOADER ─── */
+  #loader {
+    position: fixed;
+    inset: 0;
+    background: #0d1a12;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .loader-logo-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    width: 100%;
+    padding: 0 24px;
+    text-align: center;
+  }
+
+  #loader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .loader-logo-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .loader-symbol {
+    width: 90px;
+    height: 90px;
+    filter: blur(12px) drop-shadow(0 0 28px rgba(212,114,42,0.95));
+    opacity: 0;
+    animation: loaderReveal 2s ease forwards;
+  }
+
+  .loader-logo-wrap::before {
+    content: '';
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212,114,42,0.32) 0%, transparent 70%);
+    filter: blur(50px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    animation: loaderGlow 2.2s ease forwards;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  @keyframes loaderGlow {
+    0%   { opacity: 0; transform: translate(-50%, -55%) scale(0.5); }
+    100% { opacity: 1; transform: translate(-50%, -55%) scale(1); }
+  }
+
+  .loader-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.2rem, 6vw, 2rem);
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    color: var(--ivory);
+    filter: blur(8px);
+    opacity: 0;
+    animation: loaderReveal 2s ease 0.2s forwards;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .loader-sub {
+    font-family: 'Jost', sans-serif;
+    font-size: clamp(0.55rem, 2.5vw, 0.7rem);
+    letter-spacing: 0.3em;
+    color: var(--saffron-light);
+    filter: blur(6px);
+    opacity: 0;
+    animation: loaderReveal 2s ease 0.4s forwards;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  @keyframes loaderReveal {
+    0% { filter: blur(20px); opacity: 0; }
+    60% { filter: blur(4px); opacity: 0.8; }
+    100% { filter: blur(0px); opacity: 1; }
+  }
+
+  .loader-bar {
+    margin-top: 40px;
+    width: 120px;
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+    overflow: hidden;
+    border-radius: 2px;
+    align-self: center;
+  }
+
+  .loader-bar-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--saffron), var(--saffron-light));
+    animation: loadBar 1.8s ease forwards;
+  }
+
+  @keyframes loadBar {
+    0% { width: 0%; }
+    100% { width: 100%; }
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 20px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.4s ease, padding 0.4s ease;
+  }
+
+  nav.scrolled {
+    background: rgba(13, 26, 18, 0.92);
+    backdrop-filter: blur(12px);
+    padding: 14px 60px;
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--white);
+    letter-spacing: 0.05em;
+    text-decoration: none;
+  }
+
+  .nav-logo span { color: var(--saffron-light); font-style: italic; }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--saffron-light); }
+
+  .nav-cta {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.4);
+    color: var(--white) !important;
+    padding: 8px 22px;
+    border-radius: 40px;
+    transition: background 0.3s, border-color 0.3s !important;
+  }
+
+  .nav-cta:hover {
+    background: var(--saffron) !important;
+    border-color: var(--saffron) !important;
+    color: white !important;
+    box-shadow: 0 0 16px rgba(212,114,42,0.6), 0 0 36px rgba(212,114,42,0.25) !important;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .nav-desktop-cta { display: inline-block; }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 1.5px;
+    background: white;
+    transition: 0.3s;
+  }
+
+  /* ─── HERO ─── */
+  #hero {
+    position: relative;
+    height: 100vh;
+    height: 100svh;
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  #hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(8,18,12,0.55) 0%,
+      rgba(8,18,12,0.45) 60%,
+      rgba(8,18,12,0.75) 100%
+    );
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 20px;
+    max-width: 800px;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+    color: var(--saffron-light);
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.3s forwards;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--white);
+    margin-bottom: 8px;
+    opacity: 1;
+    min-height: 1.3em;
+  }
+
+  .hero-title .cursor {
+    display: inline-block;
+    width: 2px;
+    height: 0.85em;
+    background: var(--saffron-light);
+    margin-left: 4px;
+    vertical-align: middle;
+    animation: blink 0.75s step-end infinite;
+  }
+
+  @keyframes blink { 50% { opacity: 0; } }
+
+  .hero-subtitle {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.7s forwards;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.9s forwards;
+  }
+
+  .btn-primary {
+    background: var(--saffron);
+    color: white;
+    padding: 14px 34px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.82rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 18px rgba(212,114,42,0.45), 0 0 40px rgba(212,114,42,0.2);
+  }
+
+  .btn-primary:hover {
+    background: var(--saffron-light);
+    transform: translateY(-2px);
+    box-shadow: 0 0 28px rgba(232,149,106,0.7), 0 0 60px rgba(232,149,106,0.3);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: white;
+    padding: 14px 34px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.82rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border: 1px solid rgba(255,255,255,0.5);
+    transition: border-color 0.3s, background 0.3s;
+  }
+
+  .btn-outline:hover { border-color: white; background: rgba(255,255,255,0.1); }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    opacity: 0;
+    animation: fadeIn 1s ease 1.5s forwards;
+  }
+
+  .hero-scroll span {
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.5), transparent);
+    box-shadow: 0 0 8px rgba(212,114,42,0.6);
+    animation: scrollPulse 2s ease infinite;
+  }
+
+  @keyframes scrollPulse {
+    0%, 100% { transform: scaleY(1); opacity: 1; }
+    50% { transform: scaleY(0.6); opacity: 0.4; }
+  }
+
+  /* ─── WAVE DIVIDER ─── */
+  .wave-top, .wave-bottom {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  /* ─── ABOUT ─── */
+  #about {
+    background: var(--ivory);
+    padding: 100px 60px;
+  }
+
+  .about-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .about-img-float {
+    animation: floatImage 5s ease-in-out infinite;
+    will-change: transform;
+  }
+
+  .about-img-float img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+  }
+
+  @keyframes floatImage {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-14px); }
+    100% { transform: translateY(0px); }
+  }
+
+  .about-img-wrap {
+    position: relative;
+  }
+
+  .about-img-badge {
+    position: absolute;
+    bottom: -24px;
+    right: -24px;
+    background: var(--saffron);
+    color: white;
+    padding: 24px;
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  .about-img-badge .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1;
+    display: block;
+  }
+
+  .about-img-badge .label {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.9;
+  }
+
+  .about-text .section-tag {
+    font-size: 0.68rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--saffron);
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .about-text h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 300;
+    line-height: 1.25;
+    color: var(--brown);
+    margin-bottom: 24px;
+  }
+
+  .about-text h2 em { color: var(--green); font-style: italic; }
+
+  .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.85;
+    color: var(--text-light);
+    margin-bottom: 16px;
+  }
+
+  .about-divider {
+    width: 40px;
+    height: 1px;
+    background: var(--saffron);
+    box-shadow: 0 0 10px rgba(212,114,42,0.8), 0 0 24px rgba(212,114,42,0.4);
+    margin: 28px 0;
+  }
+
+  /* ─── CLASSES ─── */
+  #classes {
+    background: var(--green);
+    padding: 100px 60px;
+    position: relative;
+  }
+
+  .section-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 64px;
+  }
+
+  .section-header .section-tag {
+    font-size: 0.68rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--saffron-light);
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .section-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 300;
+    color: var(--ivory);
+    line-height: 1.25;
+  }
+
+  .section-header p {
+    margin-top: 16px;
+    font-size: 0.9rem;
+    color: rgba(250,246,240,0.65);
+    line-height: 1.8;
+  }
+
+  .classes-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+
+  .class-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 40px 32px;
+    transition: background 0.3s, transform 0.3s;
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .class-card.has-photo {
+    padding: 0;
+    cursor: pointer;
+    background: var(--ivory);
+    border-color: rgba(255,255,255,0.15);
+  }
+
+  .class-card-photo {
+    overflow: hidden;
+    position: relative;
+    line-height: 0;
+    background: rgba(0,0,0,0.12);
+  }
+
+  .class-card-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0.72;
+    transform: scale(1);
+    transition: opacity 0.35s ease, transform 0.4s cubic-bezier(0.34, 1.4, 0.64, 1);
+  }
+
+  .class-card.has-photo:hover .class-card-photo img,
+  .class-card.has-photo:active .class-card-photo img,
+  .class-card.has-photo:focus-within .class-card-photo img {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+
+  .class-card.has-photo:hover,
+  .class-card.has-photo:active,
+  .class-card.has-photo:focus-within {
+    transform: translateY(-6px);
+    background: var(--white);
+  }
+
+  .class-card-body {
+    padding: 28px 32px 40px;
+  }
+
+  .class-card.has-photo .class-card-body {
+    background: var(--ivory);
+    padding: 24px 28px 32px;
+  }
+
+  .class-card.has-photo h3 {
+    color: var(--green);
+  }
+
+  .class-card.has-photo p {
+    color: var(--text);
+  }
+
+  .class-card.has-photo .class-link {
+    color: var(--saffron);
+  }
+
+  .class-card.has-photo:hover h3 {
+    color: var(--green-light);
+  }
+
+  .class-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--saffron);
+    box-shadow: 0 0 12px rgba(212,114,42,0.9), 0 0 30px rgba(212,114,42,0.5);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+  }
+
+  .class-card:hover::before { transform: scaleX(1); }
+  .class-card:hover { background: rgba(255,255,255,0.08); transform: translateY(-4px); }
+
+  .class-icon {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .class-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--ivory);
+    margin-bottom: 10px;
+  }
+
+  .class-card p {
+    font-size: 0.85rem;
+    color: rgba(250,246,240,0.6);
+    line-height: 1.75;
+  }
+
+  .class-card .class-link {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--saffron-light);
+    text-decoration: none;
+    transition: letter-spacing 0.3s;
+  }
+
+  .class-card:hover .class-link { letter-spacing: 0.3em; }
+
+  /* ─── WHY US ─── */
+  #why {
+    background: var(--ivory);
+    padding: 100px 60px;
+  }
+
+  .why-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    text-align: center;
+  }
+
+  .why-item {
+    padding: 40px 24px;
+  }
+
+  .why-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 24px;
+    background: var(--ivory-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+  }
+
+  .why-item h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--brown);
+    margin-bottom: 12px;
+  }
+
+  .why-item p {
+    font-size: 0.88rem;
+    color: var(--text-light);
+    line-height: 1.8;
+  }
+
+  .why-section-header .section-tag { color: var(--saffron); }
+  .why-section-header h2 { color: var(--brown); }
+  .why-section-header p { color: var(--text-light); }
+
+  /* ─── GALLERY ─── */
+  #gallery {
+    background: #0d1a12;
+    padding: 100px 60px;
+  }
+
+  .gallery-section-header .section-tag { color: var(--saffron-light); }
+  .gallery-section-header h2 { color: var(--ivory); }
+
+  .gallery-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    column-count: 3;
+    column-gap: 4px;
+  }
+
+  .gallery-item {
+    overflow: hidden;
+    position: relative;
+    break-inside: avoid;
+    margin-bottom: 4px;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.6s ease;
+    display: block;
+  }
+
+  .gallery-item:hover img { transform: scale(1.05); }
+
+  /* ─── TESTIMONIALS ─── */
+  #testimonials {
+    background: var(--ivory-dark);
+    padding: 100px 60px;
+  }
+
+  .testimonials-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .testi-card {
+    background: var(--white);
+    padding: 40px 32px;
+    border-radius: 4px;
+    box-shadow: 0 4px 40px rgba(74,46,26,0.06);
+    position: relative;
+  }
+
+  .testi-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    color: var(--saffron);
+    line-height: 0.8;
+    margin-bottom: 16px;
+    opacity: 0.4;
+  }
+
+  .testi-card p {
+    font-size: 0.9rem;
+    line-height: 1.85;
+    color: var(--text-light);
+    font-style: italic;
+    margin-bottom: 28px;
+  }
+
+  .testi-stars {
+    color: var(--saffron);
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .testi-author strong {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--brown);
+  }
+
+  .testi-author span {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    letter-spacing: 0.05em;
+  }
+
+  /* ─── CONTACT ─── */
+  #contact {
+    position: relative;
+    padding: 100px 60px;
+    background: #0d1a12;
+    overflow: hidden;
+  }
+
+  #contact::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1600') center/cover no-repeat;
+    opacity: 0.12;
+  }
+
+  .contact-grid {
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .contact-info .section-tag { color: var(--saffron-light); display: block; margin-bottom: 16px; font-size: 0.68rem; letter-spacing: 0.4em; text-transform: uppercase; }
+  .contact-info h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 300; color: var(--ivory); margin-bottom: 32px; line-height: 1.25; }
+
+  .contact-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .contact-detail-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(212,114,42,0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1rem;
+  }
+
+  .contact-detail-text strong {
+    display: block;
+    color: var(--ivory);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .contact-detail-text span {
+    color: rgba(250,246,240,0.6);
+    font-size: 0.9rem;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .form-group label {
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(250,246,240,0.5);
+  }
+
+  .form-group input,
+  .form-group textarea {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 3px;
+    padding: 14px 16px;
+    color: var(--ivory);
+    font-family: 'Jost', sans-serif;
+    font-size: 0.9rem;
+    transition: border-color 0.3s;
+    outline: none;
+    resize: none;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus { border-color: var(--saffron); }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder { color: rgba(250,246,240,0.3); }
+
+  .form-group select {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 3px;
+    padding: 14px 16px;
+    color: var(--ivory);
+    font-family: 'Jost', sans-serif;
+    font-size: 0.9rem;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%23E8956A' stroke-width='1.5' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    cursor: pointer;
+  }
+
+  .form-group select option { color: #2C1810; background: var(--ivory); }
+
+  .form-note {
+    font-size: 0.72rem;
+    color: rgba(250,246,240,0.45);
+    line-height: 1.6;
+    margin-top: 4px;
+    letter-spacing: 0.02em;
+  }
+
+  .form-note.success { color: var(--saffron-light); }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--brown);
+    padding: 60px;
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--ivory);
+    letter-spacing: 0.05em;
+  }
+
+  .footer-logo span { color: var(--saffron-light); font-style: italic; }
+
+  .footer-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+
+  .footer-links a {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(250,246,240,0.5);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .footer-links a:hover { color: var(--saffron-light); }
+
+  .footer-copy {
+    font-size: 0.75rem;
+    color: rgba(250,246,240,0.35);
+    letter-spacing: 0.05em;
+  }
+
+  .about-trust-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 8px;
+  }
+
+  .trust-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .trust-icon {
+    color: var(--saffron);
+    font-size: 0.7rem;
+    margin-top: 4px;
+    flex-shrink: 0;
+    text-shadow: 0 0 8px rgba(212,114,42,0.7);
+  }
+
+  .trust-point strong {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--brown);
+    letter-spacing: 0.03em;
+  }
+
+  .trust-point span {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    line-height: 1.5;
+  }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .reveal.hidden {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ─── MOBILE NAV ─── */
+  .mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: rgba(8, 18, 12, 0.98);
+    z-index: 9998;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+  }
+
+  .mobile-menu.open {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobile-menu a {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem;
+    font-weight: 300;
+    color: rgba(250,246,240,0.15);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    padding: 14px 0;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: color 0.3s, transform 0.5s ease, opacity 0.5s ease;
+    position: relative;
+  }
+
+  .mobile-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--saffron);
+    box-shadow: 0 0 8px rgba(212,114,42,0.8);
+    transition: width 0.3s ease;
+  }
+
+  .mobile-menu a:hover::after { width: 100%; }
+  .mobile-menu a:hover { color: var(--ivory); }
+
+  .mobile-menu.open a {
+    opacity: 1;
+    transform: translateY(0);
+    color: rgba(250,246,240,0.7);
+  }
+
+  .mobile-menu.open a:nth-child(2) { transition-delay: 0.1s; }
+  .mobile-menu.open a:nth-child(3) { transition-delay: 0.18s; }
+  .mobile-menu.open a:nth-child(4) { transition-delay: 0.26s; }
+  .mobile-menu.open a:nth-child(5) { transition-delay: 0.34s; }
+  .mobile-menu.open a:nth-child(6) { transition-delay: 0.42s; }
+
+  .mobile-menu-cta {
+    margin-top: 32px;
+    background: var(--saffron);
+    color: white !important;
+    padding: 14px 40px;
+    border-radius: 50px;
+    font-family: 'Jost', sans-serif !important;
+    font-size: 0.82rem !important;
+    letter-spacing: 0.15em !important;
+    text-transform: uppercase;
+    box-shadow: 0 0 20px rgba(212,114,42,0.5);
+    opacity: 0 !important;
+    transform: translateY(20px) !important;
+    transition: background 0.3s, opacity 0.5s ease 0.5s, transform 0.5s ease 0.5s !important;
+  }
+
+  .mobile-menu.open .mobile-menu-cta {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    color: white !important;
+  }
+
+  .mobile-close {
+    position: absolute;
+    top: 28px; right: 28px;
+    background: none;
+    border: 1px solid rgba(255,255,255,0.15);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.3s, background 0.3s;
+  }
+
+  .mobile-close:hover { background: rgba(255,255,255,0.1); border-color: white; }
+
+  /* ─── HAMBURGER ANIMATION ─── */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    padding: 6px;
+    z-index: 9999;
+    position: relative;
+    background: none;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hamburger span {
+    display: block;
+    height: 1.5px;
+    background: white;
+    transition: width 0.3s ease, transform 0.4s ease, opacity 0.3s ease;
+    transform-origin: center;
+    border-radius: 2px;
+  }
+
+  .hamburger span:nth-child(1) { width: 24px; }
+  .hamburger span:nth-child(2) { width: 16px; }
+  .hamburger span:nth-child(3) { width: 20px; }
+
+  .hamburger:hover span { width: 24px; }
+
+  .hamburger.active span:nth-child(1) {
+    width: 24px;
+    transform: translateY(7.5px) rotate(45deg);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  .hamburger.active span:nth-child(3) {
+    width: 24px;
+    transform: translateY(-7.5px) rotate(-45deg);
+  }
+
+  .nav-mobile-cta {
+    display: none;
+    background: var(--saffron);
+    color: white !important;
+    padding: 8px 18px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    box-shadow: 0 0 14px rgba(212,114,42,0.4);
+    white-space: nowrap;
+  }
+
+  /* ─── SECTION CTA BAND ─── */
+  .section-cta {
+    max-width: 720px;
+    margin: 64px auto 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .section-cta p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.3rem, 3vw, 1.7rem);
+    font-weight: 300;
+    color: var(--ivory);
+    line-height: 1.4;
+    margin-bottom: 26px;
+  }
+
+  /* ─── FLOATING BOOK CTA ─── */
+  .float-cta {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 90;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: var(--saffron);
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 22px;
+    border-radius: 50px;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    box-shadow: 0 8px 24px rgba(212,114,42,0.45);
+    transition: transform 0.3s, background 0.3s, opacity 0.4s, visibility 0.4s;
+    animation: floatCtaPulse 2.8s ease-in-out infinite;
+  }
+
+  .float-cta:hover { background: var(--saffron-light); transform: translateY(-2px); }
+  .float-cta-icon { font-size: 1.05rem; line-height: 1; }
+
+  .float-cta.hide-cta {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    pointer-events: none;
+  }
+
+  @keyframes floatCtaPulse {
+    0%, 100% { box-shadow: 0 8px 24px rgba(212,114,42,0.45), 0 0 0 0 rgba(212,114,42,0.4); }
+    50%      { box-shadow: 0 8px 24px rgba(212,114,42,0.45), 0 0 0 12px rgba(212,114,42,0); }
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    nav { padding: 18px 24px; }
+    nav.scrolled { padding: 14px 24px; }
+    .nav-links { display: none; }
+    .nav-desktop-cta { display: none; }
+    .hamburger { display: flex; }
+    .nav-mobile-cta { display: block; }
+    #about, #classes, #why, #gallery, #testimonials, #contact, footer { padding: 70px 28px; }
+    .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .about-img-badge { right: 0; bottom: -20px; }
+    .classes-grid, .why-grid, .testimonials-grid { grid-template-columns: 1fr 1fr; }
+    .gallery-grid { column-count: 2; }
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 600px) {
+    nav { padding: 16px 18px; }
+    nav.scrolled { padding: 12px 18px; }
+    .nav-logo { font-size: 1.2rem; }
+    #about, #classes, #why, #gallery, #testimonials, #contact, footer { padding: 60px 20px; }
+    .classes-grid, .why-grid, .testimonials-grid { grid-template-columns: 1fr; }
+    .gallery-grid { column-count: 1; column-gap: 0; }
+    .hero-btns { flex-direction: column; align-items: center; gap: 12px; }
+    .hero-btns a { width: 100%; max-width: 300px; text-align: center; }
+    .hero-subtitle { margin-bottom: 32px; }
+    .why-item { padding: 24px 16px; }
+    .about-img-badge { padding: 18px; bottom: -16px; }
+    .about-img-badge .num { font-size: 2rem; }
+    .contact-info h2 { font-size: 2rem; }
+    .testi-card { padding: 32px 26px; }
+    .section-cta { margin-top: 48px; }
+    /* iOS zooms the page when focusing inputs < 16px — keep them at 16px */
+    .form-group input, .form-group textarea, .form-group select { font-size: 16px; }
+    .float-cta { right: 14px; bottom: 14px; padding: 12px 18px; font-size: 0.7rem; }
+  }
+
+  @media (max-width: 380px) {
+    .loader-name { letter-spacing: 0.16em; }
+    .loader-sub { white-space: normal; line-height: 1.7; }
+    .hero-eyebrow { letter-spacing: 0.3em; font-size: 0.6rem; }
+  }
+
+  /* ─── REDUCED MOTION ─── */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+    .about-img-float { animation: none; }
+  }
+</style>
+<!-- The studio's real details are below. The only placeholder left is the web address — swap it when the site goes live. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ExerciseGym",
+  "name": "Ved Yoga Shala",
+  "image": "https://www.vedyogashala.com/images/logo-mark.jpeg",
+  "url": "https://www.vedyogashala.com/",
+  "telephone": "+91-8295990809",
+  "email": "bhedpalyogi1996@gmail.com",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "House No. 623, near Subhash Chowk, Medicity, Sector 38",
+    "addressLocality": "Gurugram",
+    "addressRegion": "Haryana",
+    "postalCode": "122001",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 28.431561,
+    "longitude": 77.045568
+  },
+  "hasMap": "https://maps.app.goo.gl/uk7tk1JfmSgRsy8T9",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "06:00",
+    "closes": "21:00"
+  },
+  "areaServed": "Gurugram, Haryana, India",
+  "founder": {
+    "@type": "Person",
+    "name": "Yogi Ved"
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- LOADER DISMISS - runs instantly before anything else -->
+<script>
+  setTimeout(function() {
+    document.getElementById('loader').style.display = 'none';
+  }, 2200);
+</script>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-logo-wrap">
+    <svg class="loader-symbol" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="45" cy="45" r="40" stroke="#D4722A" stroke-width="1"/>
+      <circle cx="45" cy="45" r="28" stroke="#E8956A" stroke-width="0.5" stroke-dasharray="4 4"/>
+      <path d="M45 20 C45 20 30 32 30 45 C30 58 45 68 45 68 C45 68 60 58 60 45 C60 32 45 20 45 20Z" fill="none" stroke="#FAF6F0" stroke-width="1.2"/>
+      <circle cx="45" cy="45" r="4" fill="#D4722A"/>
+      <line x1="45" y1="12" x2="45" y2="22" stroke="#D4722A" stroke-width="1"/>
+      <line x1="45" y1="68" x2="45" y2="78" stroke="#D4722A" stroke-width="1"/>
+      <line x1="12" y1="45" x2="22" y2="45" stroke="#D4722A" stroke-width="1"/>
+      <line x1="68" y1="45" x2="78" y2="45" stroke="#D4722A" stroke-width="1"/>
+    </svg>
+    <div class="loader-name">Ved Yoga <span style="color:#E8956A;font-style:italic;">Shala</span></div>
+    <div class="loader-sub">International Yoga Teachers · Gurugram</div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">Ved <span>Yoga</span> Shala</a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#classes">Classes</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://wa.me/918295990809?text=Hi%20Ved%20Yoga%20Shala!%20I%20would%20like%20to%20book%20a%20free%20trial%20yoga%20class.%20Please%20share%20the%20batch%20timings%20and%20details." class="nav-cta nav-desktop-cta" target="_blank" rel="noopener">Book a Class</a></li>
+    </ul>
+    <a href="https://wa.me/918295990809?text=Hi%20Ved%20Yoga%20Shala!%20I%20would%20like%20to%20book%20a%20free%20trial%20yoga%20class.%20Please%20share%20the%20batch%20timings%20and%20details." class="nav-mobile-cta" target="_blank" rel="noopener">Book</a>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="toggleMenu()" aria-label="Close menu">✕</button>
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#classes" onclick="toggleMenu()">Classes</a>
+  <a href="#gallery" onclick="toggleMenu()">Gallery</a>
+  <a href="#testimonials" onclick="toggleMenu()">Reviews</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+  <a href="https://wa.me/918295990809?text=Hi%20Ved%20Yoga%20Shala!%20I%20would%20like%20to%20book%20a%20free%20trial%20yoga%20class.%20Please%20share%20the%20batch%20timings%20and%20details." class="mobile-menu-cta" target="_blank" rel="noopener" onclick="toggleMenu()">Book a Free Class</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <video id="hero-video" autoplay muted loop playsinline preload="auto"
+         poster="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1600&q=70">
+    <source src="https://cdn.coverr.co/videos/coverr-peaceful-yoga-session-in-the-park/1080p.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <!-- Bloom orbs -->
+  <div class="bloom-layer" style="z-index:2;">
+    <div class="bloom-orb" style="width:400px;height:400px;background:radial-gradient(circle,rgba(212,114,42,0.5),transparent 70%);top:20%;left:10%;animation-delay:0s;animation-duration:7s;"></div>
+    <div class="bloom-orb" style="width:300px;height:300px;background:radial-gradient(circle,rgba(45,85,64,0.6),transparent 70%);top:50%;right:8%;animation-delay:2s;animation-duration:9s;"></div>
+    <div class="bloom-orb" style="width:250px;height:250px;background:radial-gradient(circle,rgba(232,149,106,0.4),transparent 70%);bottom:15%;left:40%;animation-delay:1s;animation-duration:8s;"></div>
+  </div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">International Certified Yoga Teachers · Gurugram</p>
+    <h1 class="hero-title"><span id="tw" aria-live="off">Find Your Balance</span><span class="cursor"></span></h1>
+    <script>
+      // Typewriter runs immediately after element exists in DOM
+      (function() {
+        var phrases = ['Find Your Balance','Breathe. Flow. Transform.','Train With the Best.','Begin Your Journey Today'];
+        var p = 0, c = phrases[0].length, d = true; // seed matches the static text already in the DOM
+        function tick() {
+          var el = document.getElementById('tw');
+          if (!el) return;
+          var word = phrases[p];
+          if (!d) {
+            el.textContent = word.substring(0, c + 1);
+            c++;
+            if (c === word.length) { d = true; setTimeout(tick, 1800); return; }
+          } else {
+            el.textContent = word.substring(0, c - 1);
+            c--;
+            if (c === 0) { d = false; p = (p + 1) % phrases.length; }
+          }
+          setTimeout(tick, d ? 50 : 90);
+        }
+        tick();
+      })();
+    </script>
+    <p class="hero-subtitle">Ved Yoga Shala — Where Ancient Wisdom Meets Modern Practice</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/918295990809?text=Hi%20Ved%20Yoga%20Shala!%20I%20would%20like%20to%20book%20a%20free%20trial%20yoga%20class.%20Please%20share%20the%20batch%20timings%20and%20details." class="btn-primary" target="_blank" rel="noopener">Book a Free Class</a>
+      <a href="#classes" class="btn-outline">Explore Classes</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-img-wrap reveal">
+      <div class="about-img-float">
+        <img src="images/founder-yogi-ved.jpeg" alt="Yogi Ved — Founder & Yoga Therapist" width="960" height="1280" decoding="async">
+      </div>
+      <div class="about-img-badge">
+        <span class="num">11+</span>
+        <span class="label">Years Teaching</span>
+      </div>
+    </div>
+    <div class="about-text reveal">
+      <span class="section-tag">Our Story</span>
+      <h2>11+ Years of Teaching. <em>One Focused Practice.</em></h2>
+      <div class="about-divider"></div>
+      <p>Yogi Ved has spent over a decade teaching across Vietnam, South Goa, Hyderabad, and Gurugram — bringing a rare blend of global exposure and classical Indian roots to every session.</p>
+      <div class="about-trust-grid">
+        <div class="trust-point">
+          <span class="trust-icon">✦</span>
+          <div>
+            <strong>Certified Yoga Instructor</strong>
+            <span>Internationally recognised yoga certification</span>
+          </div>
+        </div>
+        <div class="trust-point">
+          <span class="trust-icon">✦</span>
+          <div>
+            <strong>Certified Coach</strong>
+            <span>Trained in coaching methodology beyond asana</span>
+          </div>
+        </div>
+        <div class="trust-point">
+          <span class="trust-icon">✦</span>
+          <div>
+            <strong>Taught in 4 Countries</strong>
+            <span>Vietnam · South Goa · Hyderabad · Gurugram</span>
+          </div>
+        </div>
+        <div class="trust-point">
+          <span class="trust-icon">✦</span>
+          <div>
+            <strong>Now Expanding in Gurugram</strong>
+            <span>Bringing world-class practice to your city</span>
+          </div>
+        </div>
+      </div>
+      <a href="https://wa.me/918295990809?text=Hi%20Ved%20Yoga%20Shala!%20I%20would%20like%20to%20book%20a%20free%20trial%20yoga%20class.%20Please%20share%20the%20batch%20timings%20and%20details." class="btn-primary" style="margin-top:28px;display:inline-block;" target="_blank" rel="noopener">Start Your Journey</a>
+    </div>
+  </div>
+</section>
+
+<!-- CLASSES -->
+<section id="classes">
+  <div class="bloom-layer">
+    <div class="bloom-orb" style="width:500px;height:500px;background:radial-gradient(circle,rgba(212,114,42,0.2),transparent 70%);top:-100px;right:-100px;animation-delay:0s;animation-duration:10s;"></div>
+    <div class="bloom-orb" style="width:350px;height:350px;background:radial-gradient(circle,rgba(232,149,106,0.15),transparent 70%);bottom:-80px;left:10%;animation-delay:3s;animation-duration:8s;"></div>
+  </div>
+  <div class="section-header reveal">
+    <span class="section-tag">What We Offer</span>
+    <h2>Seven Ways to Practice</h2>
+    <p>Aerial to advanced, corporate to classical — every programme led personally by Yogi Ved.</p>
+  </div>
+  <div class="classes-grid">
+    <div class="class-card has-photo reveal">
+      <div class="class-card-photo">
+        <img src="images/aerial-yoga-hammock.jpeg" alt="Aerial yoga session at Ved Yoga Shala" width="960" height="1280" loading="lazy" decoding="async">
+      </div>
+      <div class="class-card-body">
+        <span class="class-icon">🪢</span>
+        <h3>Aerial Yoga</h3>
+        <p>Suspend, invert, and decompress. Practice classical postures with the support of a silk hammock to go deeper than the mat allows.</p>
+        <a href="https://wa.me/918295990809?text=Hi%20Ved%20Yoga%20Shala!%20I%20would%20like%20to%20enquire%20about%20a%20yoga%20programme.%20Please%20share%20the%20details%20and%20timings." class="class-link" target="_blank" rel="noopener">Enquire →</a>
+      </div>
+    </div>
+    <div class="class-card has-photo reveal">
+      <div class="class-card-photo">
+        <img src="images/group-yoga-outdoor.jpeg" alt="Group yoga class outdoors" width="1280" height="960" loading="lazy" decoding="async">
+      </div>
+      <div class="class-card-body">
+        <span class="class-icon">🌿</span>
+        <h3>Group Yoga Classes</h3>
+        <p>Energising, community-led sessions for all levels. Build consistency, find your rhythm, and practice alongside others on the same path.</p>
+        <a href="https://wa.me/918295990809?text=Hi%20Ved%20Yoga%20Shala!%20I%20would%20like%20to%20enquire%20about%20a%20yoga%20programme.%20Please%20share%20the%20details%20and%20timings." class="class-link" target="_blank" rel="noopener">Enquire →</a>
+      </div>
+    </div>
+    <div class="class-card has-photo reveal">
+      <div class="class-card-photo">
+        <img src="images/corporate-yoga-session.jpeg" alt="Corporate yoga session in the workplace" width="960" height="1280" loading="lazy" decoding="async">
+      </div>
+      <div class="class-card-body">
+        <span class="class-icon">🏢</span>
+        <h3>Corporate Yoga</h3>
+        <p>Structured yoga and breathwork sessions designed for teams. Reduce stress, improve focus, and bring wellness directly to the workplace.</p>
+        <a href="https://wa.me/918295990809?text=Hi%20Ved%20Yoga%20Shala!%20I%20would%20like%20to%20enquire%20about%20a%20yoga%20programme.%20Please%20share%20the%20details%20and%20timings." class="class-link" target="_blank" rel="noopener">Enquire →</a>
+      </div>
+    </div>
+    <div class="class-card has-photo reveal">
+      <div class="class-card-photo">
+        <img src="images/advanced-yoga-arm-balance.jpeg" alt="Advanced yoga arm-balance pose on a cliff at Ved Yoga Shala" width="1280" height="1234" loading="lazy" decoding="async">
+      </div>
+      <div class="class-card-body">
+        <span class="class-icon">🔥</span>
+        <h3>Advanced Yoga</h3>
+        <p>For seasoned practitioners ready to go further. Explore complex asanas, pranayama depth, and subtle body awareness under expert guidance.</p>
+        <a href="https://wa.me/918295990809?text=Hi%20Ved%20Yoga%20Shala!%20I%20would%20like%20to%20enquire%20about%20a%20yoga%20programme.%20Please%20share%20the%20details%20and%20timings." class="class-link" target="_blank" rel="noopener">Enquire →</a>
+      </div>
+    </div>
+    <div class="class-card reveal">
+      <span class="class-icon">🎓</span>
+      <h3>Internship Yoga Course</h3>
+      <p>A hands-on programme for aspiring teachers. Learn to teach, not just to practice — with real mentorship and structured curriculum.</p>
+      <a href="https://wa.me/918295990809?text=Hi%20Ved%20Yoga%20Shala!%20I%20would%20like%20to%20enquire%20about%20a%20yoga%20programme.%20Please%20share%20the%20details%20and%20timings." class="class-link" target="_blank" rel="noopener">Enquire →</a>
+    </div>
+    <div class="class-card reveal">
+      <span class="class-icon">💧</span>
+      <h3>Shatkarma Course</h3>
+      <p>Classical yogic cleansing practices. Six purification techniques from the Hatha Yoga tradition to clear body and mind at their roots.</p>
+      <a href="https://wa.me/918295990809?text=Hi%20Ved%20Yoga%20Shala!%20I%20would%20like%20to%20enquire%20about%20a%20yoga%20programme.%20Please%20share%20the%20details%20and%20timings." class="class-link" target="_blank" rel="noopener">Enquire →</a>
+    </div>
+    <div class="class-card reveal" style="grid-column: 1 / -1; max-width: 360px; margin: 0 auto; width: 100%;">
+      <span class="class-icon">🧘</span>
+      <h3>Meditation Courses</h3>
+      <p>Guided practice in stillness, awareness, and presence. From foundational mindfulness to deeper contemplative techniques.</p>
+      <a href="https://wa.me/918295990809?text=Hi%20Ved%20Yoga%20Shala!%20I%20would%20like%20to%20enquire%20about%20a%20yoga%20programme.%20Please%20share%20the%20details%20and%20timings." class="class-link" target="_blank" rel="noopener">Enquire →</a>
+    </div>
+  </div>
+  <div class="section-cta reveal">
+    <p>Not sure where to begin? Your first class is on us.</p>
+    <a href="https://wa.me/918295990809?text=Hi%20Ved%20Yoga%20Shala!%20I%20would%20like%20to%20book%20a%20free%20trial%20yoga%20class.%20Please%20share%20the%20batch%20timings%20and%20details." class="btn-primary" target="_blank" rel="noopener">Book a Free Class</a>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="section-header why-section-header reveal">
+    <span class="section-tag">Why Choose Us</span>
+    <h2>The Ved Yoga Shala Difference</h2>
+    <p>We don't just teach postures — we guide transformation.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-item reveal">
+      <div class="why-icon">🌍</div>
+      <h3>Internationally Experienced</h3>
+      <p>Yogi Ved has taught across Vietnam, South Goa, Hyderabad, and Gurugram — over 11 years of practice in diverse cultures and student communities.</p>
+    </div>
+    <div class="why-item reveal">
+      <div class="why-icon">📜</div>
+      <h3>Dual Certified</h3>
+      <p>Both a certified yoga instructor and a certified coach — meaning you get structured physical guidance and mindset support in the same space.</p>
+    </div>
+    <div class="why-item reveal">
+      <div class="why-icon">🎯</div>
+      <h3>Every Level, Every Goal</h3>
+      <p>From beginner group classes to advanced asana, shatkarma, aerial, and internship programmes — one teacher, one consistent standard of depth.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-header gallery-section-header reveal" style="margin-bottom:48px;">
+    <span class="section-tag">Our Studio</span>
+    <h2>A Glimpse Inside the Shala</h2>
+  </div>
+  <div class="gallery-grid" style="max-width:1100px;margin:0 auto;">
+    <div class="gallery-item reveal">
+      <img src="images/studio-group-shiva-mural.jpeg" alt="Group class inside the Ved Yoga Shala studio" width="1280" height="720" loading="lazy" decoding="async">
+    </div>
+    <div class="gallery-item reveal">
+      <img src="images/studio-partner-yoga.jpeg" alt="Partner yoga practice at Ved Yoga Shala" width="1280" height="853" loading="lazy" decoding="async">
+    </div>
+    <div class="gallery-item reveal">
+      <img src="images/studio-group-celebration.jpeg" alt="Ved Yoga Shala students celebrating with flowers" width="1600" height="842" loading="lazy" decoding="async">
+    </div>
+    <div class="gallery-item reveal">
+      <img src="images/corporate-wellness-partnership.jpeg" alt="Ved Yoga Shala corporate wellness partnership" width="1280" height="960" loading="lazy" decoding="async">
+    </div>
+    <div class="gallery-item reveal">
+      <img src="images/vietnam-temple-retreat.jpeg" alt="Ved Yoga Shala group at a temple retreat in Vietnam" width="960" height="720" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-header why-section-header reveal">
+    <span class="section-tag">Student Stories</span>
+    <h2>Words From Our Community</h2>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testi-card reveal">
+      <div class="testi-quote">"</div>
+      <p>I've practiced at studios across Delhi-NCR and nothing compares to the warmth and depth of teaching at Ved Yoga Shala. My posture, breathing, and mental calm have transformed in just three months.</p>
+      <span class="testi-stars">★★★★★</span>
+      <div class="testi-author">
+        <strong>Priya Sharma</strong>
+        <span>Practicing since 2023 · Hatha & Pranayama</span>
+      </div>
+    </div>
+    <div class="testi-card reveal">
+      <div class="testi-quote">"</div>
+      <p>The 200-hour TTC programme here changed my life. The teachers are incredibly knowledgeable and genuinely invested in your growth. I left as a confident, certified yoga instructor.</p>
+      <span class="testi-stars">★★★★★</span>
+      <div class="testi-author">
+        <strong>Arjun Mehta</strong>
+        <span>TTC Graduate · Now teaching in Pune</span>
+      </div>
+    </div>
+    <div class="testi-card reveal">
+      <div class="testi-quote">"</div>
+      <p>As a complete beginner I was nervous, but the small batch size meant I never felt lost or ignored. Within weeks I was progressing faster than I thought possible. Truly special place.</p>
+      <span class="testi-stars">★★★★★</span>
+      <div class="testi-author">
+        <strong>Neha Gupta</strong>
+        <span>Beginner Batch · Vinyasa Flow</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-grid">
+    <div class="contact-info reveal">
+      <span class="section-tag">Get in Touch</span>
+      <h2>Begin Your Practice Today</h2>
+      <!-- Contact details below are real (address, phone/WhatsApp, email, hours). -->
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📍</div>
+        <div class="contact-detail-text">
+          <strong>Studio</strong>
+          <span><a href="https://maps.app.goo.gl/uk7tk1JfmSgRsy8T9" style="color:inherit;text-decoration:none;">House No. 623, near Subhash Chowk, Medicity, Sector 38, Gurugram, Haryana 122001</a></span>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📞</div>
+        <div class="contact-detail-text">
+          <strong>Call / WhatsApp</strong>
+          <span><a href="https://wa.me/918295990809" style="color:inherit;text-decoration:none;">+91 82959 90809</a></span>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">✉️</div>
+        <div class="contact-detail-text">
+          <strong>Email</strong>
+          <span><a href="mailto:bhedpalyogi1996@gmail.com" style="color:inherit;text-decoration:none;">bhedpalyogi1996@gmail.com</a></span>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">🕉️</div>
+        <div class="contact-detail-text">
+          <strong>Class Timings</strong>
+          <span>Open daily · 6:00 AM – 9:00 PM</span>
+        </div>
+      </div>
+    </div>
+
+    <form class="contact-form reveal" id="bookingForm" onsubmit="return submitBooking(event)">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="cf-name">Name</label>
+          <input id="cf-name" name="name" type="text" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label for="cf-phone">Phone</label>
+          <input id="cf-phone" name="phone" type="tel" placeholder="Your phone number" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="cf-email">Email</label>
+        <input id="cf-email" name="email" type="email" placeholder="you@email.com">
+      </div>
+      <div class="form-group">
+        <label for="cf-interest">I'm interested in</label>
+        <select id="cf-interest" name="interest">
+          <option>A free trial class</option>
+          <option>Group Yoga Classes</option>
+          <option>Aerial Yoga</option>
+          <option>Corporate Yoga</option>
+          <option>Advanced Yoga</option>
+          <option>Internship / Teacher Training</option>
+          <option>Shatkarma Course</option>
+          <option>Meditation Courses</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="cf-message">Message</label>
+        <textarea id="cf-message" name="message" rows="4" placeholder="Tell us a little about your experience and goals…"></textarea>
+      </div>
+      <button type="submit" class="btn-primary" style="margin-top:6px;width:100%;">Book via WhatsApp</button>
+      <p class="form-note" id="formNote">Tap above and we'll open WhatsApp with your details ready to send — we usually reply within a day.</p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Ved <span>Yoga</span> Shala</div>
+    <ul class="footer-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#classes">Classes</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <p class="footer-copy">© 2025 Ved Yoga Shala. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- FLOATING BOOK CTA -->
+<a href="https://wa.me/918295990809?text=Hi%20Ved%20Yoga%20Shala!%20I%20would%20like%20to%20book%20a%20free%20trial%20yoga%20class.%20Please%20share%20the%20batch%20timings%20and%20details." class="float-cta" id="floatCta" aria-label="Book a class on WhatsApp" target="_blank" rel="noopener">
+  <span class="float-cta-icon">🧘</span>
+  <span class="float-cta-text">Book a Class</span>
+</a>
+
+<script>
+  // ─── NAV SCROLL
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // ─── HAMBURGER TOGGLE
+  function toggleMenu() {
+    var menu = document.getElementById('mobileMenu');
+    var burger = document.getElementById('hamburger');
+    var isOpen = menu.classList.contains('open');
+    if (isOpen) {
+      menu.classList.remove('open');
+      burger.classList.remove('active');
+      burger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    } else {
+      menu.classList.add('open');
+      burger.classList.add('active');
+      burger.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  // ─── SCROLL REVEAL
+  // First hide all reveals, then animate them in on scroll
+  const reveals = document.querySelectorAll('.reveal');
+  reveals.forEach(r => r.classList.add('hidden'));
+
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => {
+          e.target.classList.remove('hidden');
+          e.target.classList.add('visible');
+        }, i * 80);
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(r => obs.observe(r));
+
+  // ─── VIDEO FALLBACK: if the video can't load, show the poster image on the hero
+  const video = document.getElementById('hero-video');
+  if (video) {
+    const showPoster = function () {
+      video.style.display = 'none';
+      const hero = document.getElementById('hero');
+      if (hero && !hero.style.backgroundImage) {
+        hero.style.backgroundImage = "url('" + (video.getAttribute('poster') || '') + "')";
+        hero.style.backgroundSize = 'cover';
+        hero.style.backgroundPosition = 'center';
+      }
+    };
+    video.addEventListener('error', showPoster, true);
+    // If nothing has loaded after a few seconds, fall back to the poster image
+    setTimeout(function () {
+      if (video.readyState < 2) showPoster();
+    }, 6000);
+  }
+
+  // ─── BOOKING FORM: opens WhatsApp with the enquiry details pre-filled (no backend needed)
+  const STUDIO_WA = '918295990809'; // studio WhatsApp number (international format, no +)
+  function submitBooking(e) {
+    e.preventDefault();
+    const f = e.target;
+    const lines = [
+      'Hi Ved Yoga Shala! I would like to book a free trial class. My details:',
+      'Name: ' + (f.name.value || ''),
+      'Phone: ' + (f.phone.value || ''),
+      'Email: ' + (f.email.value || ''),
+      'Interested in: ' + (f.interest ? f.interest.value : '')
+    ];
+    if (f.message.value) lines.push('Message: ' + f.message.value);
+    window.open('https://wa.me/' + STUDIO_WA + '?text=' + encodeURIComponent(lines.join('\n')), '_blank');
+    const note = document.getElementById('formNote');
+    if (note) {
+      note.textContent = 'Opening WhatsApp with your details — just tap send. Or message us directly at +91 82959 90809.';
+      note.classList.add('success');
+    }
+    return false;
+  }
+
+  // ─── Per-class "Enquire" buttons: pre-fill WhatsApp with that specific class name
+  document.querySelectorAll('.class-card .class-link').forEach(function (link) {
+    const card = link.closest('.class-card');
+    const h3 = card && card.querySelector('h3');
+    if (!h3) return;
+    const msg = 'Hi Ved Yoga Shala! I would like to know more about ' + h3.textContent.trim() +
+      '. Please share the details and timings.';
+    link.href = 'https://wa.me/' + STUDIO_WA + '?text=' + encodeURIComponent(msg);
+  });
+
+  // ─── FLOATING CTA: hide it while the booking form is on screen
+  const floatCta = document.getElementById('floatCta');
+  const contactSection = document.getElementById('contact');
+  if (floatCta && contactSection && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        floatCta.classList.toggle('hide-cta', en.isIntersecting);
+      });
+    }, { threshold: 0.2 }).observe(contactSection);
+  }
+</script>
+</body>
+</html>

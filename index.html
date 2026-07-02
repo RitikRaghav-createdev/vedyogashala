@@ -1291,12 +1291,33 @@
     margin-bottom: 26px;
   }
 
-  /* ─── FLOATING BOOK CTA ─── */
-  .float-cta {
+  /* ─── FLOATING BUTTONS (WhatsApp + Instagram) ─── */
+  .float-stack {
     position: fixed;
     right: 22px;
     bottom: 22px;
     z-index: 90;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 14px;
+  }
+
+  .float-ig {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    box-shadow: 0 8px 24px rgba(214,36,159,0.45);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .float-ig:hover { transform: translateY(-2px) scale(1.05); box-shadow: 0 10px 28px rgba(214,36,159,0.55); }
+  .float-ig svg { width: 27px; height: 27px; display: block; }
+
+  .float-cta {
     display: inline-flex;
     align-items: center;
     gap: 9px;
@@ -1363,7 +1384,10 @@
     .section-cta { margin-top: 48px; }
     /* iOS zooms the page when focusing inputs < 16px — keep them at 16px */
     .form-group input, .form-group textarea, .form-group select { font-size: 16px; }
-    .float-cta { right: 14px; bottom: 14px; padding: 12px 18px; font-size: 0.7rem; }
+    .float-stack { right: 14px; bottom: 14px; gap: 12px; }
+    .float-cta { padding: 12px 18px; font-size: 0.7rem; }
+    .float-ig { width: 48px; height: 48px; }
+    .float-ig svg { width: 24px; height: 24px; }
   }
 
   @media (max-width: 380px) {
@@ -1841,11 +1865,20 @@
   </div>
 </footer>
 
-<!-- FLOATING BOOK CTA -->
-<a href="https://wa.me/918295990809?text=Hi%20Ved%20Yoga%20Shala!%20I%20would%20like%20to%20book%20a%20free%20trial%20yoga%20class.%20Please%20share%20the%20batch%20timings%20and%20details." class="float-cta" id="floatCta" aria-label="Book a class on WhatsApp" target="_blank" rel="noopener">
-  <span class="float-cta-icon">🧘</span>
-  <span class="float-cta-text">Book a Class</span>
-</a>
+<!-- FLOATING BUTTONS: Instagram + WhatsApp booking -->
+<div class="float-stack">
+  <a href="https://www.instagram.com/ved_yoga_shala" class="float-ig" aria-label="Follow Ved Yoga Shala on Instagram" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="#fff" stroke-width="1.8"/>
+      <circle cx="12" cy="12" r="4.2" fill="none" stroke="#fff" stroke-width="1.8"/>
+      <circle cx="17.3" cy="6.7" r="1.3" fill="#fff"/>
+    </svg>
+  </a>
+  <a href="https://wa.me/918295990809?text=Hi%20Ved%20Yoga%20Shala!%20I%20would%20like%20to%20book%20a%20free%20trial%20yoga%20class.%20Please%20share%20the%20batch%20timings%20and%20details." class="float-cta" id="floatCta" aria-label="Book a class on WhatsApp" target="_blank" rel="noopener">
+    <span class="float-cta-icon">🧘</span>
+    <span class="float-cta-text">Book a Class</span>
+  </a>
+</div>
 
 <script>
   // ─── NAV SCROLL

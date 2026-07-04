@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/jpeg" href="logo-mark.jpeg">
-<link rel="apple-touch-icon" href="logo-mark.jpeg">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
 <title>Ved Yoga Shala | International Yoga Teachers | Gurugram</title>
 
 <!-- Before going live: replace every "https://www.vedyogashala.com" with the studio's real web address (also in robots.txt and sitemap.xml). See "READ ME - Before You Publish.txt". -->
@@ -1948,59 +1948,4 @@
       const hero = document.getElementById('hero');
       if (hero && !hero.style.backgroundImage) {
         hero.style.backgroundImage = "url('" + (video.getAttribute('poster') || '') + "')";
-        hero.style.backgroundSize = 'cover';
-        hero.style.backgroundPosition = 'center';
-      }
-    };
-    video.addEventListener('error', showPoster, true);
-    // If nothing has loaded after a few seconds, fall back to the poster image
-    setTimeout(function () {
-      if (video.readyState < 2) showPoster();
-    }, 6000);
-  }
-
-  // ─── BOOKING FORM: opens WhatsApp with the enquiry details pre-filled (no backend needed)
-  const STUDIO_WA = '918295990809'; // studio WhatsApp number (international format, no +)
-  function submitBooking(e) {
-    e.preventDefault();
-    const f = e.target;
-    const lines = [
-      'Hi Ved Yoga Shala! I would like to book a free trial class. My details:',
-      'Name: ' + (f.name.value || ''),
-      'Phone: ' + (f.phone.value || ''),
-      'Email: ' + (f.email.value || ''),
-      'Interested in: ' + (f.interest ? f.interest.value : '')
-    ];
-    if (f.message.value) lines.push('Message: ' + f.message.value);
-    window.open('https://wa.me/' + STUDIO_WA + '?text=' + encodeURIComponent(lines.join('\n')), '_blank');
-    const note = document.getElementById('formNote');
-    if (note) {
-      note.textContent = 'Opening WhatsApp with your details — just tap send. Or message us directly at +91 82959 90809.';
-      note.classList.add('success');
-    }
-    return false;
-  }
-
-  // ─── Per-class "Enquire" buttons: pre-fill WhatsApp with that specific class name
-  document.querySelectorAll('.class-card .class-link').forEach(function (link) {
-    const card = link.closest('.class-card');
-    const h3 = card && card.querySelector('h3');
-    if (!h3) return;
-    const msg = 'Hi Ved Yoga Shala! I would like to know more about ' + h3.textContent.trim() +
-      '. Please share the details and timings.';
-    link.href = 'https://wa.me/' + STUDIO_WA + '?text=' + encodeURIComponent(msg);
-  });
-
-  // ─── FLOATING CTA: hide it while the booking form is on screen
-  const floatCta = document.getElementById('floatCta');
-  const contactSection = document.getElementById('contact');
-  if (floatCta && contactSection && 'IntersectionObserver' in window) {
-    new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        floatCta.classList.toggle('hide-cta', en.isIntersecting);
-      });
-    }, { threshold: 0.2 }).observe(contactSection);
-  }
-</script>
-</body>
-</html>
+        hero.style.backgro

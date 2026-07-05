@@ -558,6 +558,13 @@
     display: block;
   }
 
+  /* Render "11+" in a sans face so the digits don't read like Roman numerals */
+  .num-plain {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+
   .about-img-badge .label {
     font-size: 0.65rem;
     letter-spacing: 0.15em;
@@ -1624,7 +1631,7 @@
     </div>
     <div class="about-text reveal">
       <span class="section-tag">Our Story</span>
-      <h2>11+ Years of Teaching. <em>One Focused Practice.</em></h2>
+      <h2><span class="num-plain">11+</span> Years of Teaching. <em>One Focused Practice.</em></h2>
       <div class="about-divider"></div>
       <p>Yogi Ved is an experienced yoga teacher with over 11 years of experience guiding students across
        Vietnam and India (including South Goa, Hyderabad, and Gurugram). Blending international exposure 
